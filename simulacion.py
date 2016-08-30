@@ -79,7 +79,7 @@ class Simulacion(object):
 """VARIABLES QUE SE ESTAN UTILIZANDO """
 velocidad = 3.0 # instrucciones que realiza el CPU por unidad de tiempo
 memoriaTotal = 100 # Memoria de RAM disponible
-procesos = 25 # cantidad de procesos a realizar
+procesos = 250 # cantidad de procesos a realizar
 tiempoTotal = 0 # tiempo total en la simulacion
 tiempoDes = [] # desviacion estandar del tiempo
 
@@ -91,7 +91,7 @@ RAM = simpy.Container(environment, init=memoriaTotal, capacity=memoriaTotal)
 WAIT = simpy.Resource (environment, capacity=2)  
  
 semilla = 42 # semilla para crear numeros aleatorios
-intervalo = 1 # intervalo en que se crean los procesos 
+intervalo = 10 # intervalo en que se crean los procesos 
 random.seed(semilla)
 
 
